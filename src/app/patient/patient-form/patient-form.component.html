@@ -1,0 +1,52 @@
+<p>ข้อมูลผู้ป่วย</p>
+
+<form clrForm  [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+
+    <clr-input-container>
+        <label>คำนำหน้า</label>
+        <input clrInput type="text" formControlName="prename" />
+        <clr-control-helper></clr-control-helper>
+        <clr-control-error>กรุณากรอกชื่อ</clr-control-error>
+    </clr-input-container>
+
+    <clr-input-container>
+        <label>ชื่อ</label>
+        <input clrInput type="text" formControlName="name" />
+        <clr-control-helper></clr-control-helper>
+        <clr-control-error>กรุณากรอกชื่อ</clr-control-error>
+    </clr-input-container>
+
+    <clr-input-container>
+        <label>นามสกุล</label>
+        <input clrInput type="text" formControlName="lname" />
+        <clr-control-helper></clr-control-helper>
+        <clr-control-error>กรุณากรอกนามสกุล</clr-control-error>
+    </clr-input-container>
+
+    <clr-input-container>
+        <label>วันเกิด</label>
+        <input clrInput type="text" formControlName="birth" />
+        <clr-control-helper></clr-control-helper>
+        <clr-control-error>กรอกวันเกิด</clr-control-error>
+    </clr-input-container>
+
+    <clr-input-container>
+        <label>เพศ</label>
+        <input clrInput type="text" formControlName="sex" />
+        <clr-control-helper></clr-control-helper>
+        <clr-control-error>ระบุเพศ</clr-control-error>
+    </clr-input-container>
+
+    <clr-input-container>
+        <label>เลขที่บัตร</label>
+        <input clrInput type="text" formControlName="pid" />
+        <clr-control-helper></clr-control-helper>
+        <clr-control-error>ระบุเลขที่บัตร</clr-control-error>
+    </clr-input-container>
+
+
+
+    <button  type="submit" class="btn btn-success">Save</button>
+
+
+</form>

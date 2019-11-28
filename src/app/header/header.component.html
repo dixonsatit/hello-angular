@@ -1,0 +1,37 @@
+<!-- <div [style.background-color]="bgColor">
+<p>{{title}}</p>
+<button (click)="click('Main')" [routerLink]="['index']" >Main</button>
+<button (click)="click('Page1')" [routerLink]="['page1']">Page1</button>
+<button (click)="click('Page2')" [routerLink]="['page2']">Page2</button>
+
+<button (click)="click('profile')" [routerLink]="['profile/profile']">Profile</button>
+<button (click)="click('form')" [routerLink]="['profile/form']">ProfileForm</button>
+<button (click)="click('salary')" [routerLink]="['profile/salary']">Salary</button>
+<button (click)="click('patient')" [routerLink]="['patient']">Patient</button>
+
+<button (click)="click('chat')" [routerLink]="['chat']">Chat</button>
+</div> -->
+<header class="header-6">
+  <div class="branding">
+      <a href="..." [style.color]="'green'" class="nav-link">
+          <clr-icon shape="bank"></clr-icon>
+          <span class="title">Hello Angular</span>
+      </a>
+  </div>
+  <div class="header-nav">
+      <a [routerLink]="['index']" class="active nav-link"><span class="nav-text">Main</span></a>
+      <a [routerLink]="['page1']" class="nav-link"><span class="nav-text">Page1</span></a>
+      <a [routerLink]="['page2']" class="nav-link"><span class="nav-text">Page2</span></a>
+      <a [routerLink]="['profile/profile']" class="nav-link"><span class="nav-text">Profile</span></a>
+      <a [routerLink]="['profile/form']" class="nav-link"><span class="nav-text">Form</span></a>
+      <a [routerLink]="['profile/salary']" class="nav-link"><span class="nav-text">Salary</span></a>
+      <a [routerLink]="['patient']" class="nav-link"><span class="nav-text">Patient</span></a>
+      <a [routerLink]="['patient/form']" class="nav-link"><span class="nav-text">Patient Form</span></a>
+
+  </div>
+  <div class="header-actions">
+      <a href="..." class="nav-link nav-icon" aria-label="settings">
+          <clr-icon shape="cog"></clr-icon>
+      </a>
+  </div>
+</header>

@@ -1,0 +1,7 @@
+<p>ข้อมูลเงินเดือน</p>
+<ul>
+  <li  *ngFor="let item of salaryItems" >
+    ปี: {{item.year}}, เงินเดือน: {{item.salary}}
+    <button (click)="onDelete(item.id)">X</button>
+  </li>
+</ul>

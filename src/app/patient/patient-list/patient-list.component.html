@@ -1,0 +1,28 @@
+<p>ข้อมูลผู้ป่วย</p>
+
+<clr-datagrid [clrDgLoading]="loading" [(clrDgSelected)]="selectedPatients">
+  <clr-dg-action-bar>
+    <div class="btn-group">
+        <button (click)="onAdd()" type="button" class="btn btn-sm btn-secondary" ><clr-icon shape="plus"></clr-icon> Add</button>
+        <button (click)="onDeletes()" *ngIf="selectedPatients.length>=1" type="button" class="btn btn-sm btn-secondary"  ><clr-icon shape="close"></clr-icon> Deletes ({{selectedPatients.length}})</button>
+    </div>
+  </clr-dg-action-bar>
+
+    <clr-dg-column>ชื่อ-นามสกุล</clr-dg-column>
+    <clr-dg-column>เลขบัตรประชาชน</clr-dg-column>
+    <clr-dg-column>เพศ</clr-dg-column>
+    <clr-dg-column>อายุ</clr-dg-column>
+
+    <clr-dg-row *clrDgItems="let patient of patients" [clrDgItem]="patient">
+        <clr-dg-action-overflow>
+            <button class="action-item" (click)="onEdit(patient)">Edit</button>
+            <button class="action-item" (click)="onDelete(patient)">Delete</button>
+        </clr-dg-action-overflow>
+        <clr-dg-cell>{{patient.prename}}{{patient.name}} {{patient.lname}}</clr-dg-cell>
+        <clr-dg-cell>{{patient.pid}}</clr-dg-cell>
+        <clr-dg-cell>{{patient.sex == 1 ? 'ชาย':'หญิง'}}</clr-dg-cell>
+        <clr-dg-cell>{{patient.birth | date }}</clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer>{{patients.length}} ราย</clr-dg-footer>
+</clr-datagrid>
